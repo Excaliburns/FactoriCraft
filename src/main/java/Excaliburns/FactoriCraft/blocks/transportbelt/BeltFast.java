@@ -31,6 +31,8 @@ public class BeltFast extends Block{
 
     private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0, 0, 0, 1, 3* 0.0625, 1);
 
+    public int delay = 1;
+
     public BeltFast(){
         super(Material.ROCK);
         this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);

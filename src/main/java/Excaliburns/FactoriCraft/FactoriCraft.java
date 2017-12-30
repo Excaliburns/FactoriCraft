@@ -1,5 +1,6 @@
 package Excaliburns.FactoriCraft;
 
+import Excaliburns.FactoriCraft.blocks.transportbelt.TileEntityBelt;
 import Excaliburns.FactoriCraft.proxy.CommonProxy;
 
 import net.minecraftforge.fml.common.Mod;
@@ -8,6 +9,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import java.util.logging.Logger;
 
@@ -35,6 +37,8 @@ public class FactoriCraft {
     @Mod.EventHandler
     public void init(FMLInitializationEvent e) {
         proxy.init(e);
+
+        GameRegistry.registerTileEntity(TileEntityBelt.class, FactoriCraft.MODID + ".TileEntityBelt");
     }
 
     @Mod.EventHandler

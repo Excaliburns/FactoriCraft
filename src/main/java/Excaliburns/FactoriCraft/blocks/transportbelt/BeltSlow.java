@@ -4,6 +4,7 @@ package Excaliburns.FactoriCraft.blocks.transportbelt;
 import Excaliburns.FactoriCraft.FactoriCraft;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
@@ -14,6 +15,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
@@ -29,9 +31,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class BeltSlow extends Block{
+public class BeltSlow extends Block implements ITileEntityProvider{
 
     private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0, 0, 0, 1, 3* 0.0625, 1);
+
+    public int delay = 3;
 
     public BeltSlow(){
         super(Material.ROCK);
@@ -105,5 +109,10 @@ public class BeltSlow extends Block{
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing blockFaceClickedOn, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer){
         EnumFacing enumfacing = (placer == null) ? EnumFacing.NORTH : EnumFacing.fromAngle(placer.rotationYaw);
         return this.getDefaultState().withProperty(PROPERTYFACING, enumfacing);
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta){
+        return new TileEntityBelt();
     }
 }
