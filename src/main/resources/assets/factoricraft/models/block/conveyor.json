@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+      "particle": "factoricraft:blocks/conveyortop",
+      "down": "factoricraft:blocks/conveyorbottom",
+      "up": "factoricraft:blocks/conveyortop",
+      "east": "factoricraft:blocks/conveyorside",
+      "west": "factoricraft:blocks/conveyorside",
+      "north": "factoricraft:blocks/conveyorside",
+      "south": "factoricraft:blocks/conveyorside"
+    }
+  }

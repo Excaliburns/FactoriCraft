@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import Excaliburns.FactoriCraft.blocks.conveyorbelt.ConveyorSlow;
+import Excaliburns.FactoriCraft.blocks.conveyorbelt.*;
 @Mod.EventBusSubscriber
 public class CommonProxy
 {
@@ -27,11 +27,15 @@ public class CommonProxy
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().register(new ConveyorSlow());
+        event.getRegistry().register(new Conveyor());
+        event.getRegistry().register(new ConveyorFast());
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().register(new ItemBlock(Blocks.conveyorSlow).setRegistryName(Blocks.conveyorSlow.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(Blocks.conveyor).setRegistryName(Blocks.conveyor.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(Blocks.conveyorFast).setRegistryName(Blocks.conveyorFast.getRegistryName()));
     }
 
 }
