@@ -7,7 +7,8 @@
             "2": "factoricraft:blocks/belttop",
             "3": "factoricraft:blocks/beltbottom",
             "4": "factoricraft:blocks/beltstrip",
-            "5": "factoricraft:blocks/beltstriptop"
+            "5": "factoricraft:blocks/beltstriptop",
+            "particle": "factoricraft:blocks/belttop"
         },
     "elements": [
         {
