@@ -31,16 +31,10 @@ public class CommonProxy
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        event.getRegistry().register(new ConveyorSlow());
-        event.getRegistry().register(new Conveyor());
-        event.getRegistry().register(new ConveyorFast());
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        event.getRegistry().register(new ItemBlock(ModBlocks.conveyorSlow).setRegistryName(ModBlocks.conveyorSlow.getRegistryName()));
-        event.getRegistry().register(new ItemBlock(ModBlocks.conveyor).setRegistryName(ModBlocks.conveyor.getRegistryName()));
-        event.getRegistry().register(new ItemBlock(ModBlocks.conveyorFast).setRegistryName(ModBlocks.conveyorFast.getRegistryName()));
     }
 
 }
