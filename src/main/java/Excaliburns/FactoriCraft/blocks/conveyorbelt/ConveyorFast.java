@@ -1,6 +1,6 @@
 package Excaliburns.FactoriCraft.blocks.conveyorbelt;
 
-import Excaliburns.FactoriCraft.core.FactoriCraft;
+import Excaliburns.FactoriCraft.FactoriCraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
@@ -13,6 +13,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.util.BlockRenderLayer;
+
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -60,6 +62,11 @@ public class ConveyorFast extends Block /*implements ITileEntityProvider*/{
     }
 
     @Override
+    public IBlockState getStateFromMeta(int meta) {
+        return getDefaultState().withProperty(FACING, EnumFacing.getFront((meta & 3) + 2));
+    }
+
+    @Override
     public int getMetaFromState(IBlockState state) {
         return state.getValue(FACING).getIndex();
     }
@@ -67,5 +74,15 @@ public class ConveyorFast extends Block /*implements ITileEntityProvider*/{
     @Override
     protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this, FACING);
+    }
+
+    @Override
+    public boolean isFullCube(IBlockState state) {
+        return false;
+    }
+
+    @Override
+    public BlockRenderLayer getBlockLayer(){
+        return BlockRenderLayer.TRANSLUCENT;
     }
 }

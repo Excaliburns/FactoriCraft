@@ -1,4 +1,4 @@
-package Excaliburns.FactoriCraft.core;
+package Excaliburns.FactoriCraft;
 
 import Excaliburns.FactoriCraft.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
@@ -10,9 +10,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import java.util.logging.Logger;
 
-@Mod(modid = FactoriCraft.MODID, name = FactoriCraft.MODNAME, version = FactoriCraft.VERSION, useMetadata = true)
-public class FactoriCraft
-{
+@Mod(modid = FactoriCraft.MODID, name = FactoriCraft.MODNAME, version = FactoriCraft.VERSION, useMetadata = true, acceptedMinecraftVersions = "[1.12.2]")
+public class FactoriCraft {
     public static final String MODID = "factoricraft";
     public static final String MODNAME = "FactoriCraft";
     public static final String VERSION = "0.0.1";

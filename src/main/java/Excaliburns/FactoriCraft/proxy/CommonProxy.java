@@ -1,16 +1,21 @@
 package Excaliburns.FactoriCraft.proxy;
 
-import Excaliburns.FactoriCraft.Blocks;
+import Excaliburns.FactoriCraft.ModBlocks;
+import Excaliburns.FactoriCraft.blocks.conveyorbelt.*;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import Excaliburns.FactoriCraft.blocks.conveyorbelt.*;
+
+
+
 @Mod.EventBusSubscriber
 public class CommonProxy
 {
@@ -33,9 +38,9 @@ public class CommonProxy
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        event.getRegistry().register(new ItemBlock(Blocks.conveyorSlow).setRegistryName(Blocks.conveyorSlow.getRegistryName()));
-        event.getRegistry().register(new ItemBlock(Blocks.conveyor).setRegistryName(Blocks.conveyor.getRegistryName()));
-        event.getRegistry().register(new ItemBlock(Blocks.conveyorFast).setRegistryName(Blocks.conveyorFast.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(ModBlocks.conveyorSlow).setRegistryName(ModBlocks.conveyorSlow.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(ModBlocks.conveyor).setRegistryName(ModBlocks.conveyor.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(ModBlocks.conveyorFast).setRegistryName(ModBlocks.conveyorFast.getRegistryName()));
     }
 
 }
