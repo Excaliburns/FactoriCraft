@@ -1,12 +1,13 @@
 {
     "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
+    "parent": "block/block",
     "textures": {
-        "0": "factoricraft:blocks/conveyorfb",
-        "1": "factoricraft:blocks/conveyorside",
-        "2": "factoricraft:blocks/conveyorslowtop",
-        "3": "factoricraft:blocks/conveyorbottom",
-        "4": "factoricraft:blocks/conveyorstrip",
-        "5": "factoricraft:blocks/conveyorstriptop"
+        "0": "factoricraft:blocks/beltfb",
+        "1": "factoricraft:blocks/beltside",
+        "2": "factoricraft:blocks/beltfasttop",
+        "3": "factoricraft:blocks/beltbottom",
+        "4": "factoricraft:blocks/beltstrip",
+        "5": "factoricraft:blocks/beltstriptop"
     },
     "elements": [
         {
