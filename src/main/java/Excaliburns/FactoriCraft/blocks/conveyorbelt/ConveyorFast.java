@@ -1,6 +1,7 @@
 package Excaliburns.FactoriCraft.blocks.conveyorbelt;
 
 import Excaliburns.FactoriCraft.FactoriCraft;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
