@@ -4,13 +4,16 @@ package Excaliburns.FactoriCraft.blocks.transportbelt;
 import Excaliburns.FactoriCraft.FactoriCraft;
 
 import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class BlockBeltFast extends BlockBeltBase implements ITileEntityProvider{
+import javax.annotation.Nullable;
 
-    public int delay = 1;
+public class BlockBeltFast extends BlockBeltBase{
+
+    public final int DELAY = 1;
 
     public BlockBeltFast(){
         this.setCreativeTab(CreativeTabs.REDSTONE);
@@ -20,7 +23,11 @@ public class BlockBeltFast extends BlockBeltBase implements ITileEntityProvider{
     }
 
     @Override
-    public TileEntity createNewTileEntity(World worldIn, int meta){
-        return new TileEntityBelt(delay);
+    public boolean hasTileEntity(){return true;}
+
+    @Nullable
+    @Override
+    public TileEntity createTileEntity(World world, IBlockState state) {
+        return new TileEntityBelt(DELAY);
     }
 }
