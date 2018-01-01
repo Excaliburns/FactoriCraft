@@ -24,11 +24,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class BeltBase extends Block{
+public class BlockBeltBase extends Block{
 
     private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0, 0, 0, 1, 3* 0.0625, 1);
 
-    protected BeltBase(){
+    protected BlockBeltBase(){
         super(Material.ROCK);
     }
 

@@ -8,19 +8,19 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class BeltFast extends BeltBase implements ITileEntityProvider{
+public class BlockBelt extends BlockBeltBase implements ITileEntityProvider{
 
-    public int delay = 1;
+    public int delay = 2;
 
-    public BeltFast(){
+    public BlockBelt(){
         this.setCreativeTab(CreativeTabs.REDSTONE);
-        setUnlocalizedName(FactoriCraft.MODID + ".beltfast");
-        setRegistryName("beltfast");
+        setUnlocalizedName(FactoriCraft.MODID + ".belt");
+        setRegistryName("belt");
 
     }
 
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta){
-        return new TileEntityBelt();
+        return new TileEntityBelt(delay);
     }
 }
