@@ -1,9 +1,9 @@
 package Excaliburns.FactoriCraft.proxy;
 
 import Excaliburns.FactoriCraft.ModBlocks;
-import Excaliburns.FactoriCraft.blocks.transportbelt.Belt;
-import Excaliburns.FactoriCraft.blocks.transportbelt.BeltFast;
-import Excaliburns.FactoriCraft.blocks.transportbelt.BeltSlow;
+import Excaliburns.FactoriCraft.blocks.transportbelt.BlockBelt;
+import Excaliburns.FactoriCraft.blocks.transportbelt.BlockBeltFast;
+import Excaliburns.FactoriCraft.blocks.transportbelt.BlockBeltSlow;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -34,9 +34,9 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().registerAll(
-                new BeltSlow(),
-                new Belt(),
-                new BeltFast()
+                new BlockBeltSlow(),
+                new BlockBelt(),
+                new BlockBeltFast()
         );
     }
 

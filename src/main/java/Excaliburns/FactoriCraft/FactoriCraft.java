@@ -3,6 +3,8 @@ package Excaliburns.FactoriCraft;
 import Excaliburns.FactoriCraft.blocks.transportbelt.TileEntityBelt;
 import Excaliburns.FactoriCraft.proxy.CommonProxy;
 
+import Excaliburns.FactoriCraft.worldgen.WorldGenBase;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -37,6 +39,8 @@ public class FactoriCraft {
     @Mod.EventHandler
     public void init(FMLInitializationEvent e) {
         proxy.init(e);
+
+        MinecraftForge.EVENT_BUS.register(new WorldGenBase());
 
         GameRegistry.registerTileEntity(TileEntityBelt.class, FactoriCraft.MODID + ".TileEntityBelt");
     }

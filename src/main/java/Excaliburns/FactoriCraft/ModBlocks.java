@@ -1,21 +1,21 @@
 package Excaliburns.FactoriCraft;
 
-import Excaliburns.FactoriCraft.blocks.transportbelt.Belt;
-import Excaliburns.FactoriCraft.blocks.transportbelt.BeltFast;
-import Excaliburns.FactoriCraft.blocks.transportbelt.BeltSlow;
+import Excaliburns.FactoriCraft.blocks.transportbelt.BlockBelt;
+import Excaliburns.FactoriCraft.blocks.transportbelt.BlockBeltFast;
+import Excaliburns.FactoriCraft.blocks.transportbelt.BlockBeltSlow;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModBlocks {
     @GameRegistry.ObjectHolder("factoricraft:beltslow")
-    public static BeltSlow beltSlow;
+    public static BlockBeltSlow beltSlow;
 
     @GameRegistry.ObjectHolder("factoricraft:belt")
-    public static Belt belt;
+    public static BlockBelt belt;
 
     @GameRegistry.ObjectHolder("factoricraft:beltfast")
-    public static BeltFast beltFast;
+    public static BlockBeltFast beltFast;
 
 
     @SideOnly(Side.CLIENT)
