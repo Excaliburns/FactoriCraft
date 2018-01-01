@@ -2,8 +2,8 @@
     "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
     "parent": "block/block",
     "textures": {
-        "0": "factoricraft:blocks/belttop",
-        "particle": "factoricraft:blocks/belttop"
+        "0": "factoricraft:blocks/belt",
+        "particle": "factoricraft:blocks/belt"
     },
     "elements": [
         {
