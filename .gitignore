@@ -23,6 +23,8 @@ run
 
 # floobits
 .floorc.json
+.floo
+.flooignore
 
 # minecraft
 options.txt

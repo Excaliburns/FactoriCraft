@@ -1,7 +1,35 @@
-extern
-node_modules
-tmp
-vendor
-.idea/workspace.xml
-.idea/misc.xml
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+
+# github
+.git
+.gitignore
+
+# minecraft
+options.txt
+usercache.json
+usernamecache.json
+saves
+crash-reports
 config
+run
