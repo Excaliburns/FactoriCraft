@@ -31,88 +31,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class BeltSlow extends Block implements ITileEntityProvider{
-
-    private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0, 0, 0, 1, 3* 0.0625, 1);
+public class BeltSlow extends BeltBase implements ITileEntityProvider{
 
     public int delay = 3;
 
-    public BeltSlow(){
-        super(Material.ROCK);
-        this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+    public BeltSlow() {
+        this.setCreativeTab(CreativeTabs.REDSTONE);
         setUnlocalizedName(FactoriCraft.MODID + ".beltslow");
         setRegistryName("beltslow");
-
-    }
-
-    @SideOnly(Side.CLIENT)
-    public void initModel() {
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
-    }
-
-
-    @SideOnly(Side.CLIENT)
-    public BlockRenderLayer getBlockLayer(){
-        return BlockRenderLayer.SOLID;
-    }
-
-    @Override
-    public boolean isOpaqueCube(IBlockState iBlockState){
-        return false;
-    }
-
-    @Override
-    public boolean isFullCube(IBlockState iBlockState){
-        return false;
-    }
-
-    @Override
-    public EnumBlockRenderType getRenderType(IBlockState iBlockState){
-        return EnumBlockRenderType.MODEL;
-    }
-
-    @Override
-    public AxisAlignedBB getBoundingBox(IBlockState iBlockstate, IBlockAccess worldIn, BlockPos pos){
-        return BOUNDING_BOX;
-    }
-
-    @Override
-    public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn, boolean isActualState) {
-        super.addCollisionBoxToList(state, worldIn, pos, entityBox, collidingBoxes, entityIn, isActualState);
-    }
-
-    public static final PropertyDirection PROPERTYFACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
-
-    @Override
-    public IBlockState getStateFromMeta(int meta){
-        EnumFacing facing = EnumFacing.getHorizontal(meta);
-        return this.getDefaultState().withProperty(PROPERTYFACING, facing);
-    }
-
-    @Override
-    public int getMetaFromState(IBlockState state){
-        EnumFacing facing = (EnumFacing)state.getValue(PROPERTYFACING);
-        return facing.getHorizontalIndex();
-    }
-
-    @Override
-    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-        return state;
-    }
-
-    @Override
-    protected BlockStateContainer createBlockState(){
-        return new BlockStateContainer(this, new IProperty[] {PROPERTYFACING});
-    }
-
-    @Override
-    public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing blockFaceClickedOn, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer){
-        EnumFacing enumfacing = (placer == null) ? EnumFacing.NORTH : EnumFacing.fromAngle(placer.rotationYaw);
-        return this.getDefaultState().withProperty(PROPERTYFACING, enumfacing);
     }
 
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta){
         return new TileEntityBelt();
     }
+
 }
