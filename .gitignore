@@ -24,6 +24,11 @@ run
 # floobits
 .floorc.json
 
-#minecraft
+# minecraft
+options.txt
+usercache.json
+usernamecache.json
 saves
+crash-reports
+config
 run
