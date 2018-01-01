@@ -2,52 +2,21 @@
     "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
     "parent": "block/block",
     "textures": {
-        "0": "factoricraft:blocks/beltfb",
-        "1": "factoricraft:blocks/beltside",
-        "2": "factoricraft:blocks/beltfasttop",
-        "3": "factoricraft:blocks/beltbottom",
-        "4": "factoricraft:blocks/beltstrip",
-        "5": "factoricraft:blocks/beltstriptop",
+        "0": "factoricraft:blocks/beltfasttop",
         "particle": "factoricraft:blocks/beltfasttop"
     },
     "elements": [
         {
             "name": "Cube",
-            "from": [ 0.0, 0.0, 0.0 ], 
-            "to": [ 16.0, 3.0, 16.0 ], 
+            "from": [ 0.0, 0.0, 0.0 ],
+            "to": [ 16.0, 0.1, 16.0 ],
             "faces": {
-                "north": { "texture": "#0", "uv": [ 0.0, 13.0, 16.0, 16.0 ] },
-                "east": { "texture": "#1", "uv": [ 0.0, 13.0, 16.0, 16.0 ] },
-                "south": { "texture": "#0", "uv": [ 0.0, 13.0, 16.0, 16.0 ] },
-                "west": { "texture": "#1", "uv": [ 0.0, 13.0, 16.0, 16.0 ] },
-                "up": { "texture": "#2", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
-                "down": { "texture": "#3", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
-            }
-        },
-        {
-            "name": "Cube",
-            "from": [ 0.0, 3.0, 0.0 ], 
-            "to": [ 1.0, 4.0, 16.0 ], 
-            "faces": {
-                "north": { "texture": "#4", "uv": [ 0.0, 15.0, 1.0, 16.0 ] },
-                "east": { "texture": "#4", "uv": [ 0.0, 15.0, 16.0, 16.0 ] },
-                "south": { "texture": "#4", "uv": [ 0.0, 15.0, 1.0, 16.0 ] },
-                "west": { "texture": "#4", "uv": [ 0.0, 15.0, 16.0, 16.0 ] },
-                "up": { "texture": "#5", "uv": [ 0.0, 0.0, 1.0, 16.0 ] },
-                "down": { "texture": "#5", "uv": [ 0.0, 0.0, 1.0, 16.0 ] }
-            }
-        },
-        {
-            "name": "Cube",
-            "from": [ 15.0, 3.0, 0.0 ], 
-            "to": [ 16.0, 4.0, 16.0 ], 
-            "faces": {
-                "north": { "texture": "#4", "uv": [ 0.0, 15.0, 1.0, 16.0 ] },
-                "east": { "texture": "#4", "uv": [ 0.0, 15.0, 16.0, 16.0 ] },
-                "south": { "texture": "#4", "uv": [ 0.0, 15.0, 1.0, 16.0 ] },
-                "west": { "texture": "#4", "uv": [ 0.0, 15.0, 16.0, 16.0 ] },
-                "up": { "texture": "#5", "uv": [ 0.0, 0.0, 1.0, 16.0 ] },
-                "down": { "texture": "#5", "uv": [ 0.0, 0.0, 1.0, 16.0 ] }
+                "north": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 0.1 ] },
+                "east": { "texture": "#0", "uv": [ 0.0, 1.0, 1.0, 1.0] },
+                "south": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 0.0 ] },
+                "west": { "texture": "#0", "uv": [ 0.0, 1.0, 1.0, 1.0 ] },
+                "up": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "down": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
             }
         }
     ]
